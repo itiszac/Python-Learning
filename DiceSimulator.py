@@ -1,8 +1,12 @@
 import random
 
 while True:
-    print('To roll dice enter \'roll\': ')
-    if input().lower() == 'roll':
+    print('To roll die enter \'roll\' or \'exit\' to quit game: ')
+    decision = input().lower()
+    if decision == 'roll':
         print(random.randint(1, 7))
-    else:
+    elif decision == 'exit':
+        print('Goodbye!')
         break
+    else:
+        continue
